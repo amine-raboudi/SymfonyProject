@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}ModifierArticle{% endblock %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-success">Modifier</button>
+    <br>
+
+
+
+    <a href="/copie/public/index.php/article" class="btn btn-dark btn-lg "   onclick=" return confirm('Etes-vous sûr de vouloir annuler la modification?');"  > Retour vers la listes des articles</a>
+
+    {{ form_end(form) }}
+{% endblock %}

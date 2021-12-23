@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Ajouter Article{% endblock %}
+{% block body %}
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_widget(form) }}
+    <br>
+    <button  type="submit" class="btn btn-success"    >Créer </button>
+    <br>
+    <br>
+    <a href="/copie/public/index.php/article" class="btn btn-dark btn-lg "    > Retour vers la listes des articles</a>
+    {{ form_end(form) }}
+
+{% endblock %}

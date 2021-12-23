@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ article.nom }}{% endblock %}
+{% block body %}
+    <h1>{{ article.nom }}</h1>
+    <p>{{ article.prix }}</p>
+    <img class="w-25 p-3" src="{{ asset('uploads/') ~ article.image }}" alt="Image de {{ article.nom }}">
+
+    <br>
+
+    <a href="/copie/public/index.php/article" class="btn btn-dark btn-lg "    > Retour vers la listes des articles</a>
+{% endblock %}

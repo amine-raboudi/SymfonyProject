@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}E-COMMERCE
+{% endblock %}
+
+{% block body %}
+
+    <section  class="row">
+
+    </section>
+    <section class="row">
+        {% for product in article %}
+            <div class="col-3 mt-3">
+                <div class="border border-dark rounded p-2 clearfix">
+                    <h2 style="color: darkblue">{{ product.nom }}</h2>
+                    <hr>
+                    <img class="w-75 p-3" src="{{ asset('uploads/') ~ product.image }}" alt="Image de {{ product.nom }}">
+                    <hr>
+                    <h4 style="color: red">{{ product.prix }} €</h4>
+
+
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <h4>Contact Us</h4>
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+                ><i class="fa fa-facebook-f" style="font-size:24px"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+                ><i class="fa fa-twitter" style="font-size:24px"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+                ><i class="fa fa-google" style="font-size:24px"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+                ><i class="fa fa-instagram" style="font-size:24px"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+                ><i class="fa fa-github" style="font-size:24px"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h3>What is E-commerce ?</h3>
+                <p>
+                    eCommerce is the buying and selling of goods and services online. The main root of the word “commerce” is defined as the exchange of goods and services between businesses, people, or entities.
+                </p>
+            </div>
+            <div class="col-4">
+                <h3>Services</h3>
+
+                <p >Web design</p>
+                <p>Development</p>
+                <p>Hosting</p>
+
+            </div>
+            <div class="col-4">
+                <h3 class="text-center">About</h3>
+
+                <p>Company</p>
+                <p>Team</p>
+                <p>Careers</p>
+
+            </div>
+
+
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+
+        <!-- Copyright -->
+    </footer>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des Articles{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+<div class="row">
+    <div class="form-row align-items-end" xmlns="http://www.w3.org/1999/html">
+        <div class="col">
+            <h3>Nom</h3>
+            <p class="">  {{ form(form.nom) }}</p>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Rechercher</button>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+<div>
+    {% if articles %}
+        <table id="articles" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Categorie</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ article.nom }}</td>
+                    <td>{{ article.prix }}</td>
+                    <td>{{ article.category }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h3>Aucun articles</h3>
+    {% endif %}
+
+</div>
+
+</div>
+{% endblock %}
